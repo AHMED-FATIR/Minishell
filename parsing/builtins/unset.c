@@ -6,7 +6,7 @@
 /*   By: afatir <afatir@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 09:24:58 by afatir            #+#    #+#             */
-/*   Updated: 2023/08/09 09:05:34 by afatir           ###   ########.fr       */
+/*   Updated: 2023/10/19 10:57:03 by afatir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	check_path(t_env **envs, int outfile)
 			return (print_env(*envs, outfile), 1);
 		cur = cur->next;
 	}
-	ft_putstr_fd("env: or directory\n", 2);
+	ft_putstr_fd("env: No such file or directory\n", 2);
 	return (1);
 }
 
@@ -88,6 +88,8 @@ int	unset(char *arg, t_env **envs)
 	prev = NULL;
 	if (!is_valid_uns(arg))
 		return (0);
+	if (!ft_strcmp(arg, "_"))
+		return (1);
 	while (env)
 	{
 		if (!ft_strcmp(arg, env->cmd))

@@ -6,7 +6,7 @@
 /*   By: afatir <afatir@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 07:28:57 by afatir            #+#    #+#             */
-/*   Updated: 2023/08/09 10:11:08 by afatir           ###   ########.fr       */
+/*   Updated: 2023/10/19 10:43:09 by afatir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	handler(int i)
 	(void)i;
 	write(1, "\n", 1);
 	rl_on_new_line();
-	rl_replace_line("", 0); //install readline
+	// rl_replace_line("", 0); //install readline
 	rl_redisplay();
 }
 
