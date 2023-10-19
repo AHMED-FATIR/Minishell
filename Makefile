@@ -6,15 +6,18 @@
 #    By: afatir <afatir@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/24 09:48:54 by afatir            #+#    #+#              #
-#    Updated: 2023/08/09 09:16:35 by afatir           ###   ########.fr        #
+#    Updated: 2023/10/19 11:24:39 by afatir           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= minishell
+
 CFLAGS	=  -Wall -Werror -Wextra 
 CC		= cc
+
 LIB_FT	= ./libft_gcl_ptf/
 LIB_FT_A= ./libft_gcl_ptf/libft_gcl_ptf.a
+
 MOBJS	= ${SRCS:%.c=%.o}
 SRCS	=	parsing/main.c \
 			parsing/parsing.c \
